@@ -9,13 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        macros {
-                sec: sec {
-                    compatible = "zmk,behavior-macro";
-                    #binding-cells = <0>;
-                    bindings = <&macro_tap &kp b &kp o &kp l &kp a &kp n &kp i &kp s &kp h &kp e &kp d &kp h>;
-                };
-        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -58,6 +51,16 @@
    &kp LSHFT &trans   &trans &trans   &kp PG_DN   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
+                };
+        };
+};
+
+/ {
+        macros {
+                sec: sec {
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    bindings = <&macro_tap &kp b &kp o &kp l &kp a &kp n &kp i &kp s &kp h &kp e &kp d &kp h>;
                 };
         };
 };
